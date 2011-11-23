@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:stretchColumns="1">
+    <TableRow android:id="@+id/TableRow01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dip"></TableRow><TableRow>
+		<TextView android:id="@+id/TextView01" android:textStyle="bold" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:text="App Name"></TextView>
+		<EditText android:id="@+id/EditText01" android:layout_span="2" android:layout_marginLeft="5dip" android:layout_marginRight="5dip"></EditText>
+    </TableRow>
+    
+    <TableRow>	
+		<ToggleButton android:id="@+id/ToggleButton01" android:layout_gravity="center_vertical" android:textOn="Production" android:textOff="QA" android:layout_span="2" android:bufferType="editable" android:layout_marginLeft="5dip" android:layout_marginRight="120dip"></ToggleButton>
+		<Button android:id="@+id/Button01" android:layout_column="2" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:text="Get App"></Button>
+	</TableRow>
+	
+	<TextView android:text="---or---" android:id="@+id/TextView03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="italic" android:gravity="center_horizontal" android:visibility="gone"></TextView>
+	
+	<Button android:id="@+id/Button02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use currently installed app" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:visibility="gone"></Button>
+	
+	<TableRow>
+		<TextView android:id="@+id/TextView05" android:textStyle="bold" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:text="App" android:visibility="gone"></TextView>
+		<TextView android:id="@+id/TextView06" android:text="" android:layout_span="2" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:visibility="gone"></TextView>
+	</TableRow>
+	
+	<TableRow>
+		<TextView android:id="@+id/TextView10" android:text="Release" android:textStyle="bold" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:visibility="gone"></TextView>
+		<TextView android:id="@+id/TextView11" android:text="" android:layout_span="2" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:visibility="gone"></TextView>
+	</TableRow>
+	
+	<TableRow>
+		<TextView android:id="@+id/TextView04" android:text="Package" android:textStyle="bold" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:visibility="gone"></TextView>
+		<TextView android:id="@+id/TextView07" android:text="" android:layout_span="2" android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:visibility="gone"></TextView>
+	</TableRow>
+
+	<!-- TableRow>
+		<TextView android:id="@+id/TextView08" android:layout_span="3" android:layout_gravity="right" android:layout_marginTop="5dip" android:paddingRight="10dip"></TextView>
+	</TableRow-->
+</TableLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<TextView android:id="@+id/TextView08" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingRight="10dip"></TextView>
+</RelativeLayout></LinearLayout>

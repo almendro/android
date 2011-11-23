@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ui_main"
+android:orientation="horizontal"
+android:layout_width="fill_parent"
+android:layout_height="300dip"
+>
+	<AbsoluteLayout
+	android:id="@+id/player"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="300dip"
+	android:visibility="gone"
+	>
+		<ImageView android:id="@+id/background"
+		android:src="@drawable/player_bg_port"
+		android:layout_x="0dip"
+		android:layout_y="0dip"
+		android:layout_width="fill_parent"
+		android:layout_height="300dip"
+		android:visibility="visible"
+		android:scaleType="center"
+		/>
+		
+		<ImageButton android:id="@+id/buttonBack"
+		android:src="@drawable/player_back_button"
+		android:layout_x="0dip"
+		android:layout_y="117dip"
+		android:layout_height="34dip"
+		android:layout_width="44dip"
+		android:background="@null"
+		/>
+
+		<Gallery android:id="@+id/gallery"
+		android:layout_x="80dip"
+		android:layout_y="88dip"
+		android:layout_width="320dip"
+		android:layout_height="100dip"
+		android:spacing="10dp"
+		/>
+
+		<ImageSwitcher android:id="@+id/switcher"
+		android:layout_x="160dip"
+		android:layout_y="58dip"
+		android:layout_width="160dip"
+		android:layout_height="160dip"
+		android:visibility="visible"
+		/>
+
+		<fm.flycast.ReflectionView android:id="@+id/mirror"
+		android:layout_x="160dip"
+		android:layout_y="218dip"
+		android:layout_width="160dip"
+		android:layout_height="12dip"
+		android:visibility="visible"
+		/>
+
+		<ImageView android:id="@+id/imageLive"
+		android:layout_x="333dip"
+		android:layout_y="58dip"
+		android:layout_width="47dp"
+		android:layout_height="160dip"
+		android:src="@drawable/live"
+		android:visibility="invisible"
+		/>
+
+		<ImageButton android:id="@+id/buttonCurrent"
+		android:src="@drawable/current"
+		android:layout_x="12dip"
+		android:layout_y="239dip"
+		android:layout_height="28dip"
+		android:layout_width="46dip"
+		android:background="@null"
+		/>
+
+		<View android:id="@+id/seek_spacer"
+		android:layout_height="1dip"
+		android:layout_width="fill_parent"
+		android:layout_x="0dip"
+		android:layout_y="231dip"
+		android:background="#66666666"
+		android:visibility="gone"
+		/>
+		
+		<fm.flycast.FlyProgressView android:id="@+id/seek_buffered"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_x="0dip"
+		android:layout_y="231dip"
+		/>
+
+		<ImageButton android:id="@+id/buttonPrev"
+		android:src="@drawable/prev_button"
+		android:layout_x="109dip"
+		android:layout_y="231dip"
+		android:layout_height="41dip"
+		android:layout_width="39dip"
+		android:background="@null"
+		/>
+
+		<ImageButton android:id="@+id/buttonPause"
+		android:src="@drawable/pause_button"
+		android:layout_x="179dip"
+		android:layout_y="231dip"
+		android:layout_height="41dip"
+		android:layout_width="39dip"
+		android:background="@null"
+		/>
+
+		<ImageButton android:id="@+id/buttonNext"
+		android:src="@drawable/next_button"
+		android:layout_x="249dip"
+		android:layout_y="231dip"
+		android:layout_height="41dip"
+		android:layout_width="39dip"
+		android:background="@null"
+		/>
+
+		<ImageButton android:id="@+id/buttonStop"
+		android:src="@drawable/stop_button"
+		android:layout_x="319dip"
+		android:layout_y="231dip"
+		android:layout_height="41dip"
+		android:layout_width="39dip"
+		android:background="@null"
+		/>
+
+		<ImageButton android:id="@+id/buttonTimer"
+		android:src="@drawable/timer_button"
+		android:layout_x="389dip"
+		android:layout_y="231dip"
+		android:layout_height="41dip"
+		android:layout_width="39dip"
+		android:background="@null"
+		/>
+
+		<TextView
+		android:id = "@+id/textPlayInfo"
+		android:text=""
+		android:layout_x="0dip"
+		android:layout_y="272dip"
+		android:layout_height="20dip"
+		android:layout_width="fill_parent"
+		android:gravity="center_horizontal"
+		/>
+
+	</AbsoluteLayout>
+
+</LinearLayout>

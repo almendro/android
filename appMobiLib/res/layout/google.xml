@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"  
+android:background="#CF000000"
+>    
+   	<AbsoluteLayout
+	android:id="@+id/abs"
+	android:layout_width="300dip"
+	android:layout_height="300dip"
+    android:layout_centerInParent="true"
+	>
+    		
+	    <ImageButton android:id="@+id/close"
+		android:src="@drawable/close"
+		android:layout_x="260dip"
+		android:layout_y="0dip"
+		android:layout_height="40dip"
+		android:layout_width="40dip"
+		android:background="@null"
+		/>
+
+		<TextView
+		android:id = "@+id/loading"
+		android:text="Advertisement Loading ..."
+		android:layout_x="0dip"
+		android:layout_y="40dip"
+		android:layout_height="20dip"
+		android:layout_width="fill_parent"
+		android:gravity="center_horizontal"
+		/>
+	
+	    <com.google.ads.GoogleAdView
+	    android:id="@+id/adview"
+	    android:layout_x="0dip"
+	    android:layout_y="45dip"
+	    android:layout_width="300dip"
+	    android:layout_height="250dip"
+		android:gravity="center_horizontal"
+		/>
+        
+	</AbsoluteLayout>
+	
+</RelativeLayout>

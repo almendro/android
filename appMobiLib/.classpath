@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="libs/GoogleAdView.jar"/>
+	<classpathentry kind="lib" path="libs/gson-1.6.jar" sourcepath="/Users/tony/Downloads/google-gson-1.6/gson-1.6-sources.jar"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/signpost-commonshttp4-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/signpost-core-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/nmdp_speech_kit.jar"/>
+	<classpathentry kind="lib" path="libs/armeabi/libnmsp_speex.so"/>
+	<classpathentry kind="lib" path="libs/commons-codec-1.3.jar"/>
+	<classpathentry kind="src" path="zxing_src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

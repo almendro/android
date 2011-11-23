@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">app•lab</string>
+  <string name="dir_name">applab</string>
+  <string name="version">3.4.0</string> 
+	<string name="WhiteLabelText">APPMOBI</string>
+	
+	<!-- Remote Service Support (FlyCast 2.0 feature) -->
+	<string name="remote_service_action">com.appMobi.applab.MainService</string>
+	
+	<!-- module support -->
+	<string-array name="modules">
+		<item>com.phonegap.PhoneGapModule</item>
+	</string-array>
+	
+	<string-array name="javascripts">
+		<item>phonegap</item>
+		<item>admobi</item>
+		<item>admobimgr</item>
+		<item>xhr</item>
+	</string-array>
+	
+	<!-- c2dm_sender is the Sender Id component for AC2DM registration: see http://code.google.com/android/c2dm/index.html -->
+  	<string name="c2dm_sender">ac2dm.appmobi@gmail.com</string>
+
+	<!-- used to ensure that only this app will get qrcode scan action from child activity - must be updated based on package-->
+	<string name="qrcode_scan_action">com.appMobi.applab.SCAN</string>
+
+	<!-- should this use bundled js or not -->
+	<string name="useBundledJS">false</string>
+
+	<!-- should this exit on suspend or not -->
+	<string name="shouldExitOnStop">false</string>
+ 
+</resources>

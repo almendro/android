@@ -1,0 +1,69 @@
+The appMobi platform has an ability to "live update" your application after it has already
+been installed on a user's device. This is made available via our Cloud and XDK to allow for instant
+updates that don't require any additional approvals or delays.
+
+This system can be configured to use third-party hosting instead of appMobi's Cloud.  In this document
+we will describe how to setup live updates for your application that uses your own hosting/infrastructure.
+There are several things that are needed to make this work and we will walk through them now.
+
+1) Designate a directory on your server/hosting, e.g. http://www.myserver.com/myapp
+
+2) Modify the appconfig.xml found in the AppLab directory on iOS or the AppLab/res/raw
+directory on Android. Let's look at the appconfig below:
+
+<XML>
+<CONFIG appname="name.mytestapp" title="" type="APP" pkgname="PRODUCTION" release="3.4.0" revision="4">
+<BUNDLE base="http://www.myserver.com/myapp" file="bundle.zip" version="1" />
+<JAVASCRIPT platform="iphone" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/iPhone/3.4.0/appmobi_iphone.js" />
+<JAVASCRIPT platform="android" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/Android/3.4.0/appmobi_android.js" />
+<SECURITY hasCaching="1" hasStreaming="1" hasAnalytics="0" hasPushNotify="0" hasInAppPay="0" hasAdvertising="0" hasLiveUpdate="1" hasOAuth="0" />
+<UPDATE type="1" message="Message to user about this live update."/>
+</CONFIG>
+</XML>
+
+Several things to notice here. The first important node in the XML is BUNDLE. The base attribute will point to the
+root directory you designated in Step 1. The version number should be set to 1 initially.
+
+3) Now must save this appconfig.xml back to the project before you submit it to the mobile device store.
+Also copy your updated bundle.zip (see get-started.txt) and this updated appconfig.xml to your webserver/hosting
+that was designated in Step 1. In this example, the following URLs would be valid and contain these files:
+http://www.myserver.com/myapp/bundle.zip
+http://www.myserver.com/myapp/appconfig.xml
+
+4) When your app starts, the code will look in BUNDLE->base to see if there is a live update available.
+An update is available when the BUNDLE->version from the hosting is greater than the one cached on disk
+(the first time your app is run, the appconfig.xml that was bundled in the project that you submitted
+to the mobile device store is extracted and cached on disk).
+ 
+Below is a modified version of the appconfig.xml that will cause an update. This change is made on your hosting at
+the location http://www.myserver.com/myapp/appconfig.xml
+Obviously, the point of this update is to have a new bundle.zip be installed on device so don't forget to update that
+before you modify the appconfig.xml on your server.
+
+<XML>
+<CONFIG appname="name.mytestapp" title="" type="APP" pkgname="PRODUCTION" release="3.4.0" revision="4">
+<BUNDLE base="http://www.myserver.com/myapp" file="bundle.zip" version="2" />
+<JAVASCRIPT platform="iphone" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/iPhone/3.4.0/appmobi_iphone.js" />
+<JAVASCRIPT platform="android" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/Android/3.4.0/appmobi_android.js" />
+<SECURITY hasCaching="1" hasStreaming="1" hasAnalytics="0" hasPushNotify="0" hasInAppPay="0" hasAdvertising="0" hasLiveUpdate="1" hasOAuth="0" />
+<UPDATE type="1" message="Update to change pricing and fix calculation bug."/>
+</CONFIG>
+</XML>
+
+As you can see we modified BUNDLE->version to be 2 which will cause people to get the new bundle.zip and
+appconfig.xml the next time your app is run. There are four types of updates available by setting UPDATE->type to 1-4.
+UPDATE->message is just a string that is displayed to the user describing the update that is being installed.
+More information about the types can be found in the documentation at http://www.appmobi.com
+
+NOTE: If you do rebuild your app for the mobile device store, update the appconfig.xml in the source project to have
+the current version or existing users will get an update as soon as it is started. You will also be updating your bundle.zip
+
+NOTE: Placing a new bundle.zip in your hosting location will not cause a live update. You must also update appconfig.xml
+
+If you have other questions, we have created a forum at http://forums.appmobi.com/viewforum.php?f=25
+for users to get answers to their questions.
+
+
+
+
+

@@ -1,0 +1,4 @@
+-handle expired token
+-error handling in general
+-UI(labels & layout)
+-layout of webview w/ keyboard (allow scrolling?)

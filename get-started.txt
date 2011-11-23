@@ -1,0 +1,25 @@
+In order to build using the appMobi code base you will first need the appropriate tools.
+
+For iOS, refer to http://developer.apple.com/xcode/index.php
+For Android, refer to the instructions at http://developer.android.com/sdk/index.html
+You will likely also need Eclipse for Android development from http://www.eclipse.org
+
+The default project contained in the project is just a sample.
+You can replace it with your own HTML5 based application.
+
+Simply take all of your HTML, CSS, JS and other files and place them in a zip called
+"bundle.zip". It MUST have a file called "index.html" at the top level of the zip file.
+This is the start page of your application. To access the native device functionality
+of the appMobi APIs, you can reference the sample applications included in this
+project or download documentation at http://www.appmobi.com
+Place the bundle.zip file in the AppLab directory for iOS or in the AppLab/res/raw
+directory for Android.
+
+Android development note:
+If you have trouble getting the project to compile in Eclipse, you may need to remove
+the Android library projects, hit apply, then re-add them and hit apply again.
+Also, sometimes you just have to make a whitespace change to .classpath to get the
+project to compile.
+
+If you have other questions, we have created a forum at http://forums.appmobi.com/viewforum.php?f=25
+for users to get answers to their questions.

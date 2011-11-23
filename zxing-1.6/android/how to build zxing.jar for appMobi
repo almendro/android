@@ -1,0 +1,6 @@
+appMobi zxing is aslightly stripped down version with zxing branding removed
+
+in order to build the jar to be included with appmobi, build the project in eclipse, then cd to $ZXING/android/bin and do:
+ jar cvf zxing.jar ./*
+ 
+ then move the resulting jar file to $appMobiLib/libs - you may need to do a clean after this 

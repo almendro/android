@@ -1,0 +1,9 @@
+<XML>
+<CONFIG appname="name.mytestapp" title="" type="APP" pkgname="PRODUCTION" release="3.4.0" revision="4">
+<BUNDLE base="http://www.path-to-where-i-want-to-host-my-own-live-updates/PRODUCTION" file="bundle.zip" version="1" />
+<JAVASCRIPT platform="iphone" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/iPhone/3.4.0/appmobi_iphone.js" />
+<JAVASCRIPT platform="android" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/Android/3.4.0/appmobi_android.js" />
+<SECURITY hasCaching="1" hasStreaming="1" hasAnalytics="0" hasPushNotify="0" hasInAppPay="0" hasAdvertising="0" hasLiveUpdate="1" hasOAuth="0" />
+<UPDATE type="1" message="Message to user about this live update."/>
+</CONFIG>
+</XML>

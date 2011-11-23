@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">appMobiLib</string>
+  <string name="dir_name">appMobiLib</string>
+	<string name="version">3.1.6</string>
+	
+	<string name="FlyCastBaseUrl">http://www.flycast.fm</string>
+	<string name="WhiteLabelText">APPMOBI</string>
+	
+	<!-- DeviceProxy Support (FlyCast 2.0 feature) -->    
+	<string name="DeviceProxyBaseUrl">http://localhost:</string> 
+	<string name="DeviceProxyMessagingPort">58888</string>   
+	<string name="DeviceProxyMediaPort">58888</string>
+	<string name="DeviceProxyPollMilliseconds">1000</string> 	 
+	 
+	 <string name="DeviceProxyAudioPort">57000</string>
+	<!-- Remote Service Support (FlyCast 2.0 feature) -->
+	<string name="remote_service_action">com.appMobi.appMobiLib.LocalService</string>
+	
+	<!-- appwidget support -->
+	<string name="widget_emptyplaylist">""</string>
+	
+	<!-- phonegap support -->
+	<string name="go">Snap</string>	
+	
+	<!-- module support -->
+	<string-array name="modules">
+	</string-array>
+	
+	<string-array name="javascripts">
+	</string-array>
+
+	<!-- c2dm_sender is the Sender Id component for AC2DM registration: see http://code.google.com/android/c2dm/index.html -->
+  	<string name="c2dm_sender">PLACEHOLDER SHOULD BE REPLACED IN APP PROJECT</string>
+
+	<!-- used to ensure that only this app will get qrcode scan action from child activity - must be updated based on package-->
+	<string name="qrcode_scan_action">PLACEHOLDER SHOULD BE REPLACED IN APP PROJECT</string>
+
+
+</resources>

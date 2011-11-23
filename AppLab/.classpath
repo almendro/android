@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/GoogleAdView.jar"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/gson-1.6.jar"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/signpost-commonshttp4-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/signpost-core-1.2.1.1.jar"/>
+	<classpathentry kind="src" path="/appMobiLib"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/nmdp_speech_kit.jar"/>
+	<classpathentry kind="src" path="appMobiLib_src"/>
+	<classpathentry kind="lib" path="/appMobiLib/libs/commons-codec-1.3.jar"/>
+	<classpathentry kind="src" path="zxing_src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

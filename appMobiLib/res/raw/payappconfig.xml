@@ -1,0 +1,9 @@
+<XML>
+<CONFIG appname="onetouch.app" title="1touch" type="SITE" pkgname="PRODUCTION" release="3.4.0" revision="4">
+<BUNDLE base="https://am-site.s3.amazonaws.com/app.ded33725-a2d2-465b-a8c5-d7f42de560e5/62691dda-1d1d-4a14-a68f-88ad31157085/PRODUCTION" file="bundle.zip" version="1" />
+<JAVASCRIPT platform="iphone" version="3.4.0" url="http://assets.edge.flycast.fm/appmobi/javascript/iPhone/3.4.0/appmobi_iphone.js" />
+<JAVASCRIPT platform="android" version="3.4.0" url="http://assets.edge.flycast.fm/appmobi/javascript/Android/3.4.0/appmobi_android.js" />
+<JAVASCRIPT platform="blackberry" version="3.4.0" url="" />
+<SECURITY hasCaching="1" hasStreaming="1" hasAnalytics="1" hasPushNotify="1" hasInAppPay="1" hasAdvertising="1" hasLiveUpdate="1" hasOAuth="1" />
+</CONFIG>
+</XML>

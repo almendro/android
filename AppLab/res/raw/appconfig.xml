@@ -3,7 +3,8 @@
 <BUNDLE base="http://www.path-to-where-i-want-to-host-my-own-live-updates/PRODUCTION" file="bundle.zip" version="1" />
 <JAVASCRIPT platform="iphone" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/iPhone/3.4.0/appmobi_iphone.js" />
 <JAVASCRIPT platform="android" version="3.3.0" url="http://assets.edge.flycast.fm/appmobi/javascript/Android/3.4.0/appmobi_android.js" />
-<SECURITY hasCaching="1" hasStreaming="1" hasAnalytics="0" hasPushNotify="0" hasInAppPay="0" hasAdvertising="0" hasLiveUpdate="1" hasOAuth="0" />
+<SECURITY hasCaching="1" hasStreaming="1" hasAnalytics="1" hasPushNotify="0" hasInAppPay="0" hasAdvertising="0" hasLiveUpdate="1" hasOAuth="0" />
 <UPDATE type="1" message="Message to user about this live update."/>
+<ANALYTICS id="" server="https://queue.amazonaws.com/668107645782/appmobi_b8955d85-7092-45f8-87d2-d38da297abd0"/>
 </CONFIG>
 </XML>

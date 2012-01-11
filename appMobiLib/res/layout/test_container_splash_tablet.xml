@@ -6,9 +6,9 @@ android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 >
 	<ImageView android:id="@+id/background"
-	android:src="@drawable/test_container_splash_screen"
-	android:layout_width="320dip"
-	android:layout_height="544dip"
+	android:src="@drawable/test_container_splash_screen_tablet"
+	android:layout_width="800dip"
+	android:layout_height="1255dip"
     android:layout_centerHorizontal="true"
 	android:visibility="visible"
 	/>

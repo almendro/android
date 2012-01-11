@@ -35,6 +35,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -48,16 +50,17 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -187,6 +190,13 @@ public class AppMobiActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         
+		DisplayMetrics dm = new DisplayMetrics(); 
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		boolean isTablet = false;
+        if(dm.heightPixels>=1024 || dm.widthPixels>=600) {
+        	isTablet = true;
+        }
+        
         if(!isMobius) {
         	
         	//if (Build.VERSION.SDK_INT<Build.VERSION_CODES.HONEYCOMB) {
@@ -199,12 +209,37 @@ public class AppMobiActivity extends Activity {
         	
 			//check if launched from protocol handler
 			if (Intent.ACTION_VIEW.equals(getIntent().getAction())) {
-	    		setContentView(R.layout.test_container_splash);
+				if(isTablet){
+		    		setContentView(R.layout.test_container_splash_tablet);
+				} else {
+		    		setContentView(R.layout.test_container_splash);
+				}
 	    		setProgressBarIndeterminateVisibility(true);
 			}
 			else if(!isTestContainer) {
 				if(Debug.isDebuggerConnected()) Log.i("[appMobi]", "splash");
-	    		setContentView(R.layout.splash);
+				
+				ActivityInfo ai = null;
+				try {
+					ai = getPackageManager().getActivityInfo( this.getComponentName(), PackageManager.GET_ACTIVITIES|PackageManager.GET_META_DATA);
+				} catch (NameNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				if(isTablet){
+					if(ai!=null && ai.screenOrientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+			    		setContentView(R.layout.splash_tablet_ls);
+					} else {
+			    		setContentView(R.layout.splash_tablet);
+					}
+				} else {
+					if(ai!=null && ai.screenOrientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+						setContentView(R.layout.splash_ls);
+					} else {
+						setContentView(R.layout.splash);
+					}
+				}
 	    		setProgressBarIndeterminateVisibility(true);
 	    	} else {
 		        setContentView(R.layout.login);
@@ -478,7 +513,17 @@ public class AppMobiActivity extends Activity {
 				    					//@Override
 				    					public void run()
 				    					{
-						    	    		addContentView(getLayoutInflater().inflate(R.layout.test_container_splash, null), new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+				    						DisplayMetrics dm = new DisplayMetrics(); 
+				    						getWindowManager().getDefaultDisplay().getMetrics(dm);
+				    						boolean isTablet = false;
+				    				        if(dm.heightPixels>=1024 || dm.widthPixels>=600) {
+				    				        	isTablet = true;
+				    				        }
+				    						if(isTablet){
+					    						addContentView(getLayoutInflater().inflate(R.layout.test_container_splash_tablet, null), new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+				    						} else {
+					    						addContentView(getLayoutInflater().inflate(R.layout.test_container_splash, null), new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+				    						}
 						    	    		setProgressBarIndeterminateVisibility(true);
 				    					}
 				    				});

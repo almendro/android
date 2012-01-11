@@ -5,8 +5,8 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="320dip"
-        android:layout_height="544dip"
+        android:layout_width="569dip"
+        android:layout_height="295dip"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/splash_screen"
         android:visibility="visible" />

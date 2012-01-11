@@ -5,10 +5,10 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="320dip"
-        android:layout_height="544dip"
+        android:layout_width="1280dip"
+        android:layout_height="775dip"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/splash_screen"
+        android:src="@drawable/splash_screen_tablet"
         android:visibility="visible" />
 
     <ProgressBar

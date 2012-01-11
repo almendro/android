@@ -89,19 +89,15 @@ public final class EncodeActivity extends Activity {
   private final Handler handler = new Handler() {
     @Override
     public void handleMessage(Message message) {
-      switch (message.what) {
-        case R.id.encode_succeeded:
-          Bitmap image = (Bitmap) message.obj;
-          ImageView view = (ImageView) findViewById(R.id.image_view);
-          view.setImageBitmap(image);
-          TextView contents = (TextView) findViewById(R.id.contents_text_view);
-          contents.setText(qrCodeEncoder.getDisplayContents());
-          //qrCodeEncoder = null;
-          break;
-        case R.id.encode_failed:
-          showErrorMessage(R.string.msg_encode_barcode_failed);
-          qrCodeEncoder = null;
-          break;
+      if (message.what == R.id.encode_succeeded) {
+		Bitmap image = (Bitmap) message.obj;
+		ImageView view = (ImageView) findViewById(R.id.image_view);
+		view.setImageBitmap(image);
+		TextView contents = (TextView) findViewById(R.id.contents_text_view);
+		contents.setText(qrCodeEncoder.getDisplayContents());
+      } else if (message.what == R.id.encode_failed) {
+		showErrorMessage(R.string.msg_encode_barcode_failed);
+		qrCodeEncoder = null;
       }
     }
   };
